@@ -93,35 +93,35 @@ class FirstScreen extends StatelessWidget {
 
 List<Map<String, String>> books = [
   {
-    "title": "Book One",
+    "title": "Picture One",
     "image": "https://picsum.photos/200/300?1",
   },
   {
-    "title": "Book Two",
+    "title": "Picture Two",
     "image": "https://picsum.photos/200/300?2",
   },
   {
-    "title": "Book Three",
+    "title": "Picture Three",
     "image": "https://picsum.photos/200/300?3",
   },
   {
-    "title": "Book Four",
+    "title": "Picture Four",
     "image": "https://picsum.photos/200/300?4",
   },
   {
-    "title": "Book Five",
+    "title": "Picture Five",
     "image": "https://picsum.photos/200/300?5",
   },
   {
-    "title": "Book Six",
+    "title": "Picture Six",
     "image": "https://picsum.photos/200/300?6",
   },
   {
-    "title": "Book Seven",
+    "title": "Picture Seven",
     "image": "https://picsum.photos/200/300?7",
   },
   {
-    "title": "Book Eight",
+    "title": "Picture Eight",
     "image": "https://picsum.photos/200/300?8",
   },
 ];
