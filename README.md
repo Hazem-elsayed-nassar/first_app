@@ -16,5 +16,5 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 
-![وصف الصورة 1](assets/image1.png)
-![وصف الصورة 2](assets/image2.png)
+![وصف الصورة 1](assets/images/image1.png)
+![وصف الصورة 2](assets/images/image2.png)
