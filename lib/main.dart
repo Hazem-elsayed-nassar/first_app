@@ -1,13 +1,6 @@
-
+import 'package:first_app/screens/first_screen.dart';
 import 'package:flutter/material.dart';
-import 'first_screen.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: FirstScreen(),
-  ));
-     
+  runApp(MaterialApp(home: FirstScreen()));
 }
-
-
-

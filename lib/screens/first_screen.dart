@@ -1,0 +1,128 @@
+import 'package:first_app/screens/second_screen.dart';
+import 'package:flutter/material.dart';
+
+class FirstScreen extends StatelessWidget {
+  const FirstScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 5, 133, 238),
+        title: const Text(
+          'HaZeM store',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.menu, color: Colors.white),
+          onPressed: () {},
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.white),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings, color: Colors.white),
+            onPressed: () {},
+          ),
+        ],
+      ),
+
+      body: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 15,
+                  crossAxisSpacing: 15,
+                  childAspectRatio: 0.75,
+                ),
+                itemCount: books.length,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Image.network(
+                            books[index]["image"]!,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          books[index]["title"]!,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondScreen()),
+                );
+              },
+              child: const Text(
+                'Go to Next Page',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 5, 133, 238),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Favorite',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Cart',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+List<Map<String, String>> books = [
+  {"title": "Picture One", "image": "https://picsum.photos/200/300?1"},
+  {"title": "Picture Two", "image": "https://picsum.photos/200/300?2"},
+  {"title": "Picture Three", "image": "https://picsum.photos/200/300?3"},
+  {"title": "Picture Four", "image": "https://picsum.photos/200/300?4"},
+  {"title": "Picture Five", "image": "https://picsum.photos/200/300?5"},
+  {"title": "Picture Six", "image": "https://picsum.photos/200/300?6"},
+  {"title": "Picture Seven", "image": "https://picsum.photos/200/300?7"},
+  {"title": "Picture Eight", "image": "https://picsum.photos/200/300?8"},
+];
