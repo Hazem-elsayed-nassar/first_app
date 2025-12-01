@@ -27,8 +27,7 @@ class FourthScreen extends StatelessWidget {
                 bottomLeft: Radius.circular(30),
                 bottomRight: Radius.circular(30),
               ),
-              child: Image.network(
-                "https://picsum.photos/400/300",
+              child: Image.asset(),
                 height: 300,
                 width: double.infinity,
                 fit: BoxFit.cover,
